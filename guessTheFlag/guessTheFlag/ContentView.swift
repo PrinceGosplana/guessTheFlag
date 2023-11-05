@@ -14,7 +14,10 @@ struct ContentView: View {
             spacing: 20) {
                 Spacer()
                 Text("First")
-                LinearGradient(colors: [.white, .black], startPoint: .top, endPoint: .bottom)
+                LinearGradient(stops: [
+                    .init(color: .white, location: 0.25),
+                    .init(color: .black, location: 0.75)
+                ], startPoint: .top, endPoint: .bottom)
                 ZStack {
                     Color.orange
                         .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
