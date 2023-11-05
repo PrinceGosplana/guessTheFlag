@@ -16,9 +16,17 @@ struct ContentView: View {
                 Text("First")
                 Text("Second")
                 Text("Third")
+                ZStack {
+                    Color.orange
+                        .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
+                    Text("Color is orange")
+                }
                 Spacer()
                 Spacer()
             }
+            .background(.blue)
+            .ignoresSafeArea()
+        
     }
 }
 
