@@ -21,6 +21,16 @@ struct ContentView: View {
                         .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
                     Text("Color is orange")
                 }
+                ZStack {
+                    VStack(spacing: 0) {
+                        Color.red
+                        Color.green
+                    }
+                    Text("Your content")
+                        .foregroundStyle(.secondary)
+                        .padding(50)
+                        .background(.ultraThinMaterial)
+                }
                 Spacer()
                 Spacer()
             }
