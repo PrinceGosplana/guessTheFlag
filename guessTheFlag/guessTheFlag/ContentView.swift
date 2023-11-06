@@ -27,10 +27,10 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .foregroundStyle(.white)
                     .background(.red.gradient)
-                ZStack {
-                    Color.orange
-                        .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
-                    Text("Color is orange")
+                HStack {
+                    Button("Delete selection", action: executeDelete)
+                        .foregroundStyle(.white)
+                        .buttonStyle(.bordered)
                 }
                 ZStack {
                     VStack(spacing: 0) {
@@ -47,6 +47,10 @@ struct ContentView: View {
             .background(.blue)
             .ignoresSafeArea()
         
+    }
+    
+    private func executeDelete() {
+        print("Now deleting...")
     }
 }
 
