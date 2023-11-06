@@ -18,6 +18,10 @@ struct ContentView: View {
                     .init(color: .white, location: 0.25),
                     .init(color: .black, location: 0.75)
                 ], startPoint: .top, endPoint: .bottom)
+                RadialGradient(colors: [.blue, .black],
+                               center: .center,
+                               startRadius: 10,
+                               endRadius: 100)
                 ZStack {
                     Color.orange
                         .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
