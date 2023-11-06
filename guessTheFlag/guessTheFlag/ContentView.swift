@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showingAlert = false
+    
     var body: some View {
         VStack(
             alignment: .leading,
@@ -29,7 +32,7 @@ struct ContentView: View {
                     .background(.red.gradient)
                 HStack {
                     Button {
-                        print("Button was tapped")
+                        showingAlert = true
                     } label: {
                         Label("Edit", systemImage: "pencil")
                             .foregroundStyle(.white)
@@ -54,6 +57,9 @@ struct ContentView: View {
             }
             .background(.blue)
             .ignoresSafeArea()
+            .alert("Important message", isPresented: $showingAlert) {
+                Button("OK") {}
+            }
         
     }
     
