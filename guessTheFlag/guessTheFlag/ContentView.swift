@@ -28,16 +28,14 @@ struct ContentView: View {
                     .foregroundStyle(.white)
                     .background(.red.gradient)
                 HStack {
-                    Button("Delete selection", action: executeDelete)
-                        .foregroundStyle(.white)
-                        .buttonStyle(.bordered)
-                    Button("Destructive", role: .destructive) {}
-                        .buttonStyle(.borderedProminent)
-                    Button("Destructive") {}
-                        .buttonStyle(.borderedProminent)
-                    Button("Destructive") {}
-                        .buttonStyle(.bordered)
-                        .tint(.indigo)
+                    Button {
+                        print("Button was tapped")
+                    } label: {
+                        Text("Tap me!")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(.red.gradient)
+                    }
                 }
                 ZStack {
                     VStack(spacing: 0) {
