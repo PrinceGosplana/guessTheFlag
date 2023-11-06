@@ -31,9 +31,9 @@ struct ContentView: View {
                     Button {
                         print("Button was tapped")
                     } label: {
-                        Text("Tap me!")
-                            .padding()
-                            .foregroundColor(.white)
+                        Label("Edit", systemImage: "pencil")
+                            .foregroundStyle(.white)
+                            .font(.largeTitle)
                             .background(.red.gradient)
                     }
                     Image(systemName: "pencil.circle")
