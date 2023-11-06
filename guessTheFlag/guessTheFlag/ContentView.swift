@@ -23,6 +23,10 @@ struct ContentView: View {
                                startRadius: 10,
                                endRadius: 100)
                 AngularGradient(colors: [.red, .yellow, .green, .blue, .purple, .red], center: .center)
+                Text("Slight gradient")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .foregroundStyle(.white)
+                    .background(.red.gradient)
                 ZStack {
                     Color.orange
                         .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
@@ -38,7 +42,6 @@ struct ContentView: View {
                         .padding(50)
                         .background(.ultraThinMaterial)
                 }
-                Spacer()
                 Spacer()
             }
             .background(.blue)
