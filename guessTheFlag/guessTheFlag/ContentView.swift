@@ -36,6 +36,9 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .background(.red.gradient)
                     }
+                    Image(systemName: "pencil.circle")
+                        .foregroundStyle(.red)
+                        .font(.largeTitle)
                 }
                 ZStack {
                     VStack(spacing: 0) {
