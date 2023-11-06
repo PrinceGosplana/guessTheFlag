@@ -31,6 +31,13 @@ struct ContentView: View {
                     Button("Delete selection", action: executeDelete)
                         .foregroundStyle(.white)
                         .buttonStyle(.bordered)
+                    Button("Destructive", role: .destructive) {}
+                        .buttonStyle(.borderedProminent)
+                    Button("Destructive") {}
+                        .buttonStyle(.borderedProminent)
+                    Button("Destructive") {}
+                        .buttonStyle(.bordered)
+                        .tint(.indigo)
                 }
                 ZStack {
                     VStack(spacing: 0) {
