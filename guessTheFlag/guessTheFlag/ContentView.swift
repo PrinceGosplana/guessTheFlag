@@ -22,6 +22,7 @@ struct ContentView: View {
                                center: .center,
                                startRadius: 10,
                                endRadius: 100)
+                AngularGradient(colors: [.red, .yellow, .green, .blue, .purple, .red], center: .center)
                 ZStack {
                     Color.orange
                         .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 300)
