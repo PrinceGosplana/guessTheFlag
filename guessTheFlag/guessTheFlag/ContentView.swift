@@ -58,7 +58,10 @@ struct ContentView: View {
             .background(.blue)
             .ignoresSafeArea()
             .alert("Important message", isPresented: $showingAlert) {
-                Button("OK") {}
+                Button("Delete", role: .destructive) {}
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("Please read this")
             }
         
     }
