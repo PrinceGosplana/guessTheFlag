@@ -25,6 +25,7 @@ struct ContentView: View {
                            endRadius: 700)
                 .ignoresSafeArea()
             VStack {
+                Spacer()
                 Text("Guess the Flag")
                     .font(.largeTitle.bold())
                     .foregroundStyle(.white)
@@ -51,11 +52,14 @@ struct ContentView: View {
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
                 .clipShape(.rect(cornerRadius: 20))
-                
+                Spacer()
+                Spacer()
                 Text("Score ???")
                     .foregroundStyle(.white)
                     .font(.title.bold())
+                Spacer()
             }
+            .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
