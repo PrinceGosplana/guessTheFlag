@@ -24,7 +24,7 @@ struct ContentView: View {
                            startRadius: 200,
                            endRadius: 700)
                 .ignoresSafeArea()
-            VStack(spacing: 30) {
+            VStack(spacing: 15) {
                 VStack {
                     Text("Tap the flag of")
                         .foregroundStyle(.white)
@@ -44,6 +44,10 @@ struct ContentView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 20)
+            .background(.regularMaterial)
+            .clipShape(.rect(cornerRadius: 20))
         }
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
