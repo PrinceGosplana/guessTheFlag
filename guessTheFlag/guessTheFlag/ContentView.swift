@@ -59,6 +59,7 @@ struct ContentView: View {
                                 .clipShape(.capsule)
                                 .shadow(radius: 5)
                         }
+                        .accessibilityLabel(labels[countries[number], default: "Unknown flag"])
                     }
                 }
                 .frame(maxWidth: .infinity)
